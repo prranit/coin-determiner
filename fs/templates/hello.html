@@ -1,0 +1,23 @@
+{% extends "template.html" %}
+{% block content %}
+
+	<center>
+	
+		<form method="POST" action="{{ url_for('runcoin') }}" >
+			Input a number:
+			<input type=number name=numb min=1 max=250>
+			<input type=submit value=enter>	
+		</form>
+		
+
+		{% if a == 1 %}
+			{{ a }} coin
+		{% endif %}
+
+		{% if a > 1 %}
+			{{ a }} coins
+		{% endif %}
+			
+	</center>
+
+{% endblock %}

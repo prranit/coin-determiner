@@ -1,0 +1,24 @@
+{% extends "template.html" %}
+{% block content %}
+	<center>
+		<form method="POST" action="/upload" enctype="multipart/form-data">
+			Upload a test file:
+			<input type=file name=file>
+			<p><br><input type=submit value=Submit>	
+		</form>
+		{% if resval == 0 %}
+			<table border=1>
+				<th>Test Results</th>
+					{% for i in reslist %}
+						<tr> <td>{{ i }}</td> </tr>
+					{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if resval == 1 %}
+			Sorry, your test failed. 
+		{% endif %}
+
+		{{ suberr }}
+        </center>
+{% endblock %}
