@@ -34,14 +34,14 @@ def fileprocess(filename):
         for i in range(len(tstnum)):
             resnum.append(coinapp.coin(tstnum[i]))
 
-	#calls retres to combine lists
+        #calls retres to combine lists
         finallist = retres(tstnum, resnum)
         
-	return finallist
+        return finallist
 
     #return empty list if test fails
     except:
-	emtlist = []
+        emtlist = []
         return emtlist
 
 
@@ -54,11 +54,11 @@ def retres(tstnum, resnum):
     c = []
     for i in range(len(a)):
 
-	#Ensure proper grammar
-	if b[i] == 1:
-	    grammar = " coin."
+        #Ensure proper grammar
+        if b[i] == 1:
+            grammar = " coin."
         else:
-	    grammar = " coins."
+            grammar = " coins."
 
         a[i] = "For " + str(a[i]) + ", you will need " + str(b[i]) + grammar
 
