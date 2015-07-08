@@ -18,8 +18,8 @@
 #### 4. Change your directory to inside the 'fs' folder
 #### 5. Inside the terminal, type: **"python routes.py"**
 #### 6. The default address for the web app is: **127.0.0.1:5000** 
-####	* Might differ on your machine*
+	####	* Might differ on your machine
 #### 7. Once the web app opens, feel free to type in any number in the range 1 to 250 to see how many coins it needs.
 #### 8. If you would like to test the app with multiple values, go ahead and click on **Test App**
 #### 9. Here, you can upload a **.txt** file to test the app. For convenience, I have provided the "test.txt" file. You can change the values inside the file to try different numbers.
-#### 	* Note: To work properly, the test file must list each number on a seperate line. *Otherwise it will fail.*
+	#### 	* Note: To work properly, the test file must list each number on a seperate line. *Otherwise it will fail.*
