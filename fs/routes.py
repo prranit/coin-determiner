@@ -33,7 +33,7 @@ def runcoin():
         a = coinapp.coin(request.form['numb'])
         return render_template("hello.html", a=a)
     except:
- 	return render_template("hello.html", a=0)
+        return render_template("hello.html", a=0)
 
 #This function uploads the test file and processes the test values
 @app.route('/upload', methods=['GET', 'POST'])
@@ -41,22 +41,22 @@ def upload():
     if request.method == 'POST':
         try:
 
-	    #This block uploads the file and saves it to our local directory
+        #This block uploads the file and saves it to our local directory
             file = request.files['file']
             if file and filehandle.allowed_file(file.filename):
                 filename = secure_filename(file.filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-	    
+        
 
-	    #Retrieve and display results from file processing
+        #Retrieve and display results from file processing
             reslist = filehandle.fileprocess(filename)
-	    if len(reslist) > 3:
-		resval = 0
-	    else:
-		resval = 1
+            if len(reslist) > 3:
+                resval = 0
+            else:
+                resval = 1
             return render_template("upload.html", resval = resval, reslist = reslist)
 
-	#If no file has been uploaded, send user an error
+    #If no file has been uploaded, send user an error
         except:
             suberr = "Please upload a .txt file before submitting."
             return render_template("upload.html", suberr=suberr)
